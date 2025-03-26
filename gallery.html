@@ -5,18 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - PRTU Suryapet</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile-fixes.css">
     <link rel="stylesheet" href="css/gallery.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="language-switcher">
-        <button id="language-btn" class="language-btn">
-            <i class="fas fa-globe"></i>
-            <span data-translate="Telugu">తెలుగు</span>
-        </button>
-    </div>
-
     <header>
         <div class="logo-container">
             <img src="images/logo.jpg" alt="PRTU Logo" class="logo">
@@ -48,28 +42,82 @@
     </section>
 
     <section class="gallery-container">
+        <div class="gallery-intro">
+            <p>Welcome to the PRTU Suryapet photo gallery. Browse through images of our union activities, events, and celebrations. Use the filters below to narrow down your view by category.</p>
+            <!-- Adding mobile-specific note -->
+            <div class="image-info-note">
+                <p><i class="fas fa-mobile-alt"></i> Mobile users: Tap an image to view details. Swipe left or right to navigate through photos in the viewer.</p>
+            </div>
+        </div>
+        
         <div class="gallery-filters">
-            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn active" data-filter="all">All Photos</button>
             <button class="filter-btn" data-filter="events">Events</button>
             <button class="filter-btn" data-filter="meetings">Meetings</button>
             <button class="filter-btn" data-filter="celebrations">Celebrations</button>
+            <button class="filter-btn" data-filter="workshops">Workshops</button>
         </div>
 
         <div class="gallery-grid">
-            <!-- Placeholder gallery items -->
+            <!-- Events category -->
             <div class="gallery-item" data-category="events">
-                <img src="images/gallery/event1.jpg" alt="Teachers' Day Celebration">
+                <img src="https://source.unsplash.com/800x600/?teachers,education,event" alt="Teachers' Day Celebration">
                 <div class="gallery-caption">Teachers' Day Celebration 2023</div>
             </div>
+            <div class="gallery-item" data-category="events">
+                <img src="images/gallery/event2.jpg" alt="Annual Sports Meet">
+                <div class="gallery-caption">Annual Sports Meet 2023</div>
+            </div>
+            <div class="gallery-item" data-category="events">
+                <img src="images/gallery/event3.jpg" alt="State Education Conference">
+                <div class="gallery-caption">State Education Conference 2023</div>
+            </div>
+            
+            <!-- Meetings category -->
             <div class="gallery-item" data-category="meetings">
                 <img src="images/gallery/meeting1.jpg" alt="Annual General Meeting">
                 <div class="gallery-caption">Annual General Meeting 2023</div>
             </div>
+            <div class="gallery-item" data-category="meetings">
+                <img src="images/gallery/meeting2.jpg" alt="Executive Committee Meeting">
+                <div class="gallery-caption">Executive Committee Meeting - September 2023</div>
+            </div>
+            <div class="gallery-item" data-category="meetings">
+                <img src="images/gallery/meeting3.jpg" alt="District Representatives Meeting">
+                <div class="gallery-caption">District Representatives Meeting - August 2023</div>
+            </div>
+            
+            <!-- Celebrations category -->
             <div class="gallery-item" data-category="celebrations">
                 <img src="images/gallery/celebration1.jpg" alt="New Year Celebration">
                 <div class="gallery-caption">New Year Celebration 2023</div>
             </div>
-            <!-- More items will be loaded dynamically -->
+            <div class="gallery-item" data-category="celebrations">
+                <img src="images/gallery/celebration2.jpg" alt="Republic Day Celebration">
+                <div class="gallery-caption">Republic Day Celebration 2023</div>
+            </div>
+            <div class="gallery-item" data-category="celebrations">
+                <img src="images/gallery/celebration3.jpg" alt="Telangana Formation Day">
+                <div class="gallery-caption">Telangana Formation Day Celebration 2023</div>
+            </div>
+            
+            <!-- Workshops category -->
+            <div class="gallery-item" data-category="workshops">
+                <img src="images/gallery/workshop1.jpg" alt="Teaching Methodology Workshop">
+                <div class="gallery-caption">Teaching Methodology Workshop - July 2023</div>
+            </div>
+            <div class="gallery-item" data-category="workshops">
+                <img src="images/gallery/workshop2.jpg" alt="Digital Learning Workshop">
+                <div class="gallery-caption">Digital Learning Workshop - May 2023</div>
+            </div>
+            <div class="gallery-item" data-category="workshops">
+                <img src="images/gallery/workshop3.jpg" alt="Teacher Leadership Development">
+                <div class="gallery-caption">Teacher Leadership Development Program - April 2023</div>
+            </div>
+        </div>
+        
+        <div class="gallery-load-more">
+            <button id="load-more-btn" class="btn">Load More Images</button>
         </div>
     </section>
 
@@ -116,7 +164,15 @@
         <button class="modal-next"><i class="fas fa-chevron-right"></i></button>
     </div>
 
+    <div class="language-switcher" data-fixed="true">
+        <button id="language-btn" class="language-btn">
+            <i class="fas fa-globe"></i>
+            <span data-translate="Telugu">తెలుగు</span>
+        </button>
+    </div>
+
     <script src="js/translations.js"></script>
+    <script src="js/mobile-fixes.js"></script>
     <script src="js/gallery.js"></script>
     <script src="js/script.js"></script>
 </body>

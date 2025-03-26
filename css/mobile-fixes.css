@@ -1,0 +1,524 @@
+/*
+ * Additional Mobile Fixes for PRTU Suryapet Website
+ * This file contains emergency fixes for mobile display issues
+ */
+
+/* Fix for hamburger button not working */
+@media (max-width: 768px) {
+    /* Mobile Navigation Overlay */
+    .nav-overlay {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background-color: rgba(0, 0, 0, 0.5) !important;
+        z-index: 98 !important;
+        display: none !important;
+    }
+    
+    .nav-overlay.active {
+        display: block !important;
+    }
+    
+    /* Ensure the header has proper z-index */
+    header {
+        position: relative !important;
+        z-index: 100 !important;
+    }
+    
+    /* Ensure hamburger is clickable */
+    .hamburger, #hamburger {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 40px !important;
+        height: 30px !important;
+        padding: 5px !important;
+        margin-right: 10px !important;
+        margin-left: auto !important;  /* Push to right side */
+        cursor: pointer !important;
+        z-index: 1000 !important;
+        position: relative !important;
+        background: transparent !important;
+        border: none !important;
+        outline: none !important;
+    }
+    
+    .hamburger .bar, #hamburger .bar {
+        display: block !important;
+        width: 25px !important;
+        height: 3px !important;
+        background-color: var(--dark-color) !important;
+        margin: 3px 0 !important;
+        transition: all 0.4s ease !important;
+    }
+    
+    /* Ensure logo container doesn't block hamburger */
+    .logo-container {
+        z-index: 90;
+    }
+    
+    /* Fix language switcher position */
+    .language-switcher {
+        z-index: 102;
+    }
+    
+    /* Make language switcher more visible on mobile */
+    .language-switcher {
+        bottom: 25px !important;
+        right: 20px !important;
+        /* Important to override any other styles */
+        position: fixed !important;
+        z-index: 9999 !important;
+    }
+    
+    .language-btn {
+        width: auto;
+        height: auto;
+        padding: 12px 18px !important;
+        font-size: 1.1rem !important;
+    }
+    
+    /* Ensure it's above other elements */
+    .language-switcher {
+        z-index: 1050 !important; 
+    }
+    
+    /* Fix for mobile scrolling with active menu */
+    body.nav-active {
+        overflow: hidden !important;
+        position: fixed !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    /* Fix hamburger menu sliding issue */
+    /* Ensure consistent sliding direction */
+    .nav-links, #nav-links {
+        position: fixed !important;
+        top: 0 !important;
+        right: -100% !important; /* Start offscreen */
+        left: auto !important;
+        width: 80% !important;
+        max-width: 300px !important;
+        height: 100vh !important;
+        flex-direction: column !important;
+        background-color: var(--dark-color) !important;
+        transition: right 0.3s ease !important;
+        z-index: 99 !important;
+        padding-top: 80px !important;
+        padding-bottom: 20px !important;
+        overflow-y: auto !important;
+    }
+    
+    .nav-links.active, #nav-links.active {
+        right: 0 !important;
+    }
+    
+    /* Prevent horizontal scrolling when menu is active */
+    body.nav-active {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    /* Ensure hamburger button is properly styled and clickable */
+    .hamburger, #hamburger {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 40px !important;
+        height: 30px !important;
+        padding: 5px !important;
+        margin-right: 10px !important;
+        margin-left: auto !important;  /* Push to right side */
+        cursor: pointer !important;
+        z-index: 1000 !important;
+        position: relative !important;
+        background: transparent !important;
+        border: none !important;
+        outline: none !important;
+    }
+    
+    .hamburger .bar, #hamburger .bar {
+        display: block !important;
+        width: 25px !important;
+        height: 3px !important;
+        background-color: var(--dark-color) !important;
+        margin: 3px 0 !important;
+        transition: all 0.4s ease !important;
+    }
+
+    /* Ensure hamburger is visible and clickable */
+    .hamburger, #hamburger {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 40px !important;
+        height: 30px !important;
+        padding: 5px !important;
+        margin-right: 10px !important;
+        margin-left: auto !important;  /* Push to right side */
+        cursor: pointer !important;
+        z-index: 1000 !important;
+        position: relative !important;
+        background: transparent !important;
+        border: none !important;
+        outline: none !important;
+    }
+
+    /* Critically fixed hamburger styling */
+    .hamburger, #hamburger {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 40px !important;
+        height: 30px !important;
+        padding: 5px !important;
+        margin-right: 10px !important;
+        margin-left: auto !important;  /* Push to right side */
+        cursor: pointer !important;
+        z-index: 1000 !important;
+        position: relative !important;
+        background: transparent !important;
+        border: none !important;
+        outline: none !important;
+    }
+    
+    .hamburger .bar, #hamburger .bar {
+        display: block !important;
+        width: 25px !important;
+        height: 3px !important;
+        background-color: var(--dark-color) !important;
+        transition: all 0.4s ease !important;
+        margin: 3px auto !important;
+    }
+    
+    /* Fix nav-links positioning */
+    .nav-links, #nav-links {
+        position: fixed !important;
+        top: 0 !important;
+        right: -100% !important; /* Start offscreen */
+        left: auto !important;
+        width: 80% !important;
+        max-width: 300px !important;
+        height: 100vh !important;
+        flex-direction: column !important;
+        background-color: var(--dark-color) !important;
+        transition: right 0.3s ease !important;
+        z-index: 99 !important;
+        padding-top: 80px !important;
+        padding-bottom: 20px !important;
+        overflow-y: auto !important;
+    }
+    
+    .nav-links.active, #nav-links.active {
+        right: 0 !important;
+    }
+}
+
+/* Make sure the hamburger has a large tap target */
+@media (max-width: 768px) {
+    .hamburger, #hamburger {
+        min-width: 44px !important; /* For better accessibility */
+        min-height: 44px !important;
+        padding: 8px 0 !important;
+    }
+    
+    /* Add a hoverable effect */
+    .hamburger:hover .bar, #hamburger:hover .bar {
+        background-color: var(--primary-color) !important;
+    }
+}
+
+/* Enhanced language switcher button */
+.language-btn {
+    transition: all 0.3s ease;
+    /* Increase touch target size for mobile */
+    padding: 12px 20px !important;
+    border-radius: 30px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+.language-changed {
+    transform: scale(1.2);
+    background-color: #e67e22 !important;
+}
+
+/* Additional mobile fixes */
+@media (max-width: 480px) {
+    /* Make sure feature cards stack properly */
+    .features {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Fix for gallery item display */
+    .gallery-item {
+        height: 200px !important;
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+        transform: none !important;
+    }
+    
+    /* Fix gallery caption always visible on mobile */
+    .gallery-item .gallery-caption {
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    
+    /* Fix footer sections on mobile */
+    .footer-section {
+        padding-bottom: 20px;
+    }
+    
+    .language-switcher {
+        bottom: 20px !important;
+        right: 15px !important;
+    }
+    
+    .language-btn {
+        padding: 10px 15px !important;
+    }
+}
+
+/* Fixed Language Switcher Position for ALL devices - this must override everything */
+.language-switcher {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    top: auto !important;
+    z-index: 9999 !important;
+}
+
+/* Fixed Language Switcher Position - HIGHEST PRIORITY */
+.language-switcher {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    top: auto !important;
+    z-index: 9999 !important;
+    display: block !important;
+}
+
+/* Ensure this overrides all other styles */
+html body .language-switcher {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+}
+
+/* Reset any conflicting position styles from other media queries */
+@media (max-width: 768px), (max-width: 480px) {
+    .language-switcher {
+        position: fixed !important; 
+        bottom: 20px !important;
+        right: 20px !important;
+        top: auto !important;
+    }
+}
+
+/* Critical hamburger menu fixes - HIGH PRIORITY */
+@media (max-width: 768px) {
+    /* Ensure consistent hamburger styling across ALL pages */
+    #hamburger, .hamburger {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 40px !important;
+        height: 40px !important;
+        cursor: pointer !important;
+        z-index: 1000 !important;
+        position: relative !important;
+        background: transparent !important;
+        border: none !important;
+        outline: none !important;
+        margin-left: auto !important;
+    }
+    
+    #hamburger .bar, .hamburger .bar {
+        display: block !important;
+        width: 25px !important;
+        height: 3px !important;
+        background-color: var(--dark-color) !important;
+        margin: 3px 0 !important;
+        transition: all 0.4s ease !important;
+    }
+    
+    /* Fixed navigation positioning */
+    #navbar, nav {
+        width: 100% !important;
+    }
+    
+    #nav-links, .nav-links {
+        position: fixed !important;
+        top: 0 !important;
+        right: -100% !important; /* Start offscreen */
+        left: auto !important;
+        width: 80% !important;
+        max-width: 300px !important;
+        height: 100vh !important;
+        flex-direction: column !important;
+        background-color: var(--dark-color) !important;
+        transition: right 0.3s ease !important;
+        z-index: 99 !important;
+        padding-top: 80px !important;
+        padding-bottom: 20px !important;
+        overflow-y: auto !important;
+    }
+    
+    #nav-links.active, .nav-links.active {
+        right: 0 !important;
+    }
+    
+    #nav-links li, .nav-links li {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+    
+    #nav-links a, .nav-links a {
+        color: white !important;
+        padding: 15px 25px !important;
+        display: block !important;
+        width: 100% !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    .nav-links a:hover, .nav-links a.active,
+    #nav-links a:hover, #nav-links a.active {
+        background-color: var(--primary-color) !important;
+        color: white !important;
+    }
+    
+    /* HAMBURGER ANIMATION - Open State */
+    .hamburger.active .bar:nth-child(1),
+    #hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg) !important;
+    }
+    
+    .hamburger.active .bar:nth-child(2),
+    #hamburger.active .bar:nth-child(2) {
+        opacity: 0 !important;
+    }
+    
+    .hamburger.active .bar:nth-child(3),
+    #hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg) !important;
+    }
+    
+    /* Prevent body scrolling when menu is active */
+    body.nav-active {
+        overflow: hidden !important;
+        position: fixed !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+/* Reset all previous hamburger menu styles */
+@media (max-width: 768px) {
+    /* Basic setup for hamburger toggle */
+    .hamburger {
+        display: none !important;
+    }
+
+    #hamburger {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 44px !important;
+        height: 44px !important;
+        padding: 10px !important;
+        margin-left: auto !important;
+        cursor: pointer !important;
+        z-index: 1000 !important;
+        position: relative !important;
+        background: transparent !important;
+        border: none !important;
+    }
+
+    #hamburger .bar {
+        width: 25px !important;
+        height: 3px !important;
+        background-color: var(--dark-color) !important;
+        margin: 2px 0 !important;
+        transition: all 0.3s ease !important;
+        display: block !important;
+    }
+
+    /* Animation for hamburger */
+    #hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg) !important;
+    }
+
+    #hamburger.active .bar:nth-child(2) {
+        opacity: 0 !important;
+    }
+
+    #hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg) !important;
+    }
+
+    /* Navigation menu */
+    .nav-links {
+        position: fixed !important;
+        top: 0 !important;
+        right: -100% !important;
+        width: 80% !important;
+        max-width: 300px !important;
+        height: 100vh !important;
+        background-color: var(--dark-color) !important;
+        padding-top: 60px !important;
+        transition: right 0.3s ease !important;
+        z-index: 99 !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .nav-links.active {
+        right: 0 !important;
+    }
+
+    .nav-links li {
+        margin: 0 !important;
+    }
+
+    .nav-links a {
+        color: white !important;
+        padding: 15px 25px !important;
+        display: block !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    /* Overlay */
+    .nav-overlay {
+        display: none !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: rgba(0, 0, 0, 0.5) !important;
+        z-index: 98 !important;
+    }
+
+    .nav-overlay.active {
+        display: block !important;
+    }
+
+    /* Prevent scrolling when menu is open */
+    body.nav-active {
+        overflow: hidden !important;
+        position: fixed !important;
+        width: 100% !important;
+    }
+}

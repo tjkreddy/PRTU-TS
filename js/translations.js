@@ -8,6 +8,8 @@ const translations = {
     "Members": "సభ్యులు",
     "News & Updates": "వార్తలు & అప్డేట్స్",
     "Contact": "సంప్రదించండి",
+    "Gallery": "గ్యాలరీ",
+    "FAQ": "తరచుగా అడిగే ప్రశ్నలు",
     
     // Hero Section
     "Progressive Recognised Teachers' Union - Telangana State": "ప్రోగ్రెసివ్ రికగ్నైజ్డ్ టీచర్స్ యూనియన్ - తెలంగాణ రాష్ట్రం",
@@ -39,6 +41,8 @@ const translations = {
     // News Section
     "Latest Updates": "తాజా అప్డేట్స్",
     "View All News": "అన్ని వార్తలు చూడండి",
+    "Photo Gallery": "ఫోటో గ్యాలరీ",
+    "Frequently Asked Questions": "తరచుగా అడిగే ప్రశ్నలు",
     
     // Resources Section
     "Resources for Teachers": "ఉపాధ్యాయుల కోసం వనరులు",
@@ -50,6 +54,14 @@ const translations = {
     "Download membership application forms": "సభ్యత్వ దరఖాస్తు ఫారాలను డౌన్‌లోడ్ చేయండి",
     "View the current academic year calendar": "ప్రస్తుత విద్యా సంవత్సర క్యాలెండర్‌ను వీక్షించండి",
     "Access model lesson plans and resources": "మోడల్ పాఠ ప్రణాళికలు మరియు వనరులను యాక్సెస్ చేయండి",
+    
+    // Members Page
+    "Members Directory": "సభ్యుల డైరెక్టరీ",
+    "Membership Benefits": "సభ్యత్వ ప్రయోజనాలు",
+    "How to Join PRTU": "పీఆర్టీయూలో ఎలా చేరాలి",
+    "Membership Categories": "సభ్యత్వ వర్గాలు",
+    "Member Directory": "సభ్యుల డైరెక్టరీ",
+    "Join Our Growing Community": "మా పెరుగుతున్న సమాజంలో చేరండి",
     
     // CTA Section
     "Join PRTU-TS Suryapet": "పీఆర్టీయూ-టీఎస్ సూర్యాపేటలో చేరండి",

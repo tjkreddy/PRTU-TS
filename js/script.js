@@ -2,30 +2,10 @@
 
 // Wait for the DOM to fully load
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Navigation Toggle
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
-
-    if (hamburger) {
-        hamburger.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-            // Change hamburger to X when nav is open
-            hamburger.classList.toggle('active');
-        });
-    }
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-        const isClickInsideNav = navLinks && navLinks.contains(event.target);
-        const isClickInsideHamburger = hamburger && hamburger.contains(event.target);
-        
-        if (navLinks && navLinks.classList.contains('active') && !isClickInsideNav && !isClickInsideHamburger) {
-            navLinks.classList.remove('active');
-            if (hamburger) hamburger.classList.remove('active');
-        }
-    });
-
-    // Language Switcher
+    // Remove ALL hamburger menu related code from here
+    // Let mobile-fixes.js handle it exclusively
+    
+    // Enhanced Language Switcher
     const languageBtn = document.getElementById('language-btn');
     if (languageBtn) {
         languageBtn.addEventListener('click', function() {
@@ -37,6 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Update button text
             this.querySelector('span').textContent = newLang === 'en' ? 'తెలుగు' : 'English';
+            
+            // Visual feedback on language change
+            this.classList.add('language-changed');
+            setTimeout(() => this.classList.remove('language-changed'), 500);
             
             // Apply translations if Telugu is selected
             if (newLang === 'te') {
@@ -306,30 +290,21 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// CSS class to handle the hamburger animation
+// Keep this for hamburger animation styles but make it load AFTER mobile-fixes.js
 document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.getElementById('hamburger');
-    
-    if (hamburger) {
-        hamburger.addEventListener('click', function() {
-            this.classList.toggle('active');
-        });
-    }
-});
-
-// Additional styles for hamburger menu when active
-document.addEventListener('DOMContentLoaded', function() {
-    const style = document.createElement('style');
-    style.textContent = `
-        .hamburger.active .bar:nth-child(1) {
-            transform: translateY(8px) rotate(45deg);
-        }
-        .hamburger.active .bar:nth-child(2) {
-            opacity: 0;
-        }
-        .hamburger.active .bar:nth-child(3) {
-            transform: translateY(-8px) rotate(-45deg);
-        }
-    `;
-    document.head.appendChild(style);
+    setTimeout(() => {
+        const style = document.createElement('style');
+        style.textContent = `
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+        `;
+        document.head.appendChild(style);
+    }, 100); // Small delay to ensure it loads after mobile-fixes.js
 });
