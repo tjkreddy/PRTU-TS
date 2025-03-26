@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - PRTU Suryapet</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="language-switcher">
+        <button id="language-btn" class="language-btn">
+            <i class="fas fa-globe"></i>
+            <span data-translate="Telugu">తెలుగు</span>
+        </button>
+    </div>
+
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.jpg" alt="PRTU Logo" class="logo">
+            <div class="logo-text">
+                <h1>PRTU Suryapet</h1>
+                <p>Progressive Recognised Teachers' Union - Telangana State</p>
+            </div>
+        </div>
+        <nav id="navbar">
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" data-translate="Home">Home</a></li>
+                <li><a href="about.html" data-translate="About Us">About Us</a></li>
+                <li><a href="members.html" data-translate="Members">Members</a></li>
+                <li><a href="gallery.html" class="active" data-translate="Gallery">Gallery</a></li>
+                <li><a href="news.html" data-translate="News & Updates">News & Updates</a></li>
+                <li><a href="faq.html" data-translate="FAQ">FAQ</a></li>
+                <li><a href="contact.html" data-translate="Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h2 data-translate="Photo Gallery">Photo Gallery</h2>
+    </section>
+
+    <section class="gallery-container">
+        <div class="gallery-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="events">Events</button>
+            <button class="filter-btn" data-filter="meetings">Meetings</button>
+            <button class="filter-btn" data-filter="celebrations">Celebrations</button>
+        </div>
+
+        <div class="gallery-grid">
+            <!-- Placeholder gallery items -->
+            <div class="gallery-item" data-category="events">
+                <img src="images/gallery/event1.jpg" alt="Teachers' Day Celebration">
+                <div class="gallery-caption">Teachers' Day Celebration 2023</div>
+            </div>
+            <div class="gallery-item" data-category="meetings">
+                <img src="images/gallery/meeting1.jpg" alt="Annual General Meeting">
+                <div class="gallery-caption">Annual General Meeting 2023</div>
+            </div>
+            <div class="gallery-item" data-category="celebrations">
+                <img src="images/gallery/celebration1.jpg" alt="New Year Celebration">
+                <div class="gallery-caption">New Year Celebration 2023</div>
+            </div>
+            <!-- More items will be loaded dynamically -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 data-translate="Contact Information">Contact Information</h3>
+                <p><i class="fas fa-map-marker-alt"></i> PRTU Office, Suryapet, Telangana</p>
+                <p><i class="fas fa-phone"></i> +91 9XXXXXXXXX</p>
+                <p><i class="fas fa-envelope"></i> info@prtusuryapet.org</p>
+            </div>
+            <div class="footer-section">
+                <h3 data-translate="Quick Links">Quick Links</h3>
+                <ul>
+                    <li><a href="index.html" data-translate="Home">Home</a></li>
+                    <li><a href="about.html" data-translate="About Us">About Us</a></li>
+                    <li><a href="members.html" data-translate="Members">Members</a></li>
+                    <li><a href="gallery.html" data-translate="Gallery">Gallery</a></li>
+                    <li><a href="news.html" data-translate="News & Updates">News & Updates</a></li>
+                    <li><a href="faq.html" data-translate="FAQ">FAQ</a></li>
+                    <li><a href="contact.html" data-translate="Contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 data-translate="Follow Us">Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 PRTU Suryapet. <span data-translate="All Rights Reserved">All Rights Reserved</span>.</p>
+        </div>
+    </footer>
+
+    <div class="gallery-modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div class="modal-caption"></div>
+        <button class="modal-prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="modal-next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <script src="js/translations.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
