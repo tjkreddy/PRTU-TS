@@ -1,0 +1,48 @@
+{
+  "name": "prtu-website",
+  "version": "1.0.0",
+  "description": "PRTU Government Teachers Union Website - MERN Stack",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "build": "npm run server:build && npm run client:build",
+    "start": "npm run server:start",
+    "server:dev": "cd server && npm run dev",
+    "server:build": "cd server && npm run build",
+    "server:start": "cd server && npm start",
+    "client:dev": "cd client && npm start",
+    "client:build": "cd client && npm run build",
+    "client:test": "cd client && npm test",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install && cd ..",
+    "clean": "rm -rf node_modules server/node_modules client/node_modules",
+    "clean:server": "cd server && rm -rf node_modules dist",
+    "clean:client": "cd client && rm -rf node_modules build"
+  },
+  "keywords": [
+    "prtu",
+    "teachers",
+    "union",
+    "government",
+    "mern",
+    "react",
+    "nodejs",
+    "mongodb",
+    "express"
+  ],
+  "author": "PRTU Development Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prtu/website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/prtu/website/issues"
+  },
+  "homepage": "https://prtu.org"
+}
